@@ -8,6 +8,9 @@ RUN cd /opt && \
 	chmod +x dlv && \
 	ln -s /opt/dlv /usr/bin
 
+
+USER jovyan
+
 # get the clingo binary file for linux
 # and install 
 # get the clingo binary file using conda install
@@ -15,7 +18,6 @@ RUN conda install -c potassco clingo
 RUN conda install -c anaconda graphviz
 RUN conda install -c anaconda pygraphviz
 
-USER jovyan
 # install PW_explorer	
 RUN pip install PW_explorer
 
