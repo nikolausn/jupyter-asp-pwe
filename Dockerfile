@@ -9,6 +9,10 @@ RUN cd /opt && \
 	tar -xvzf clingo.tar.gz && \
 	ln -s /opt/clingo-5.3.0-linux-x86_64/clingo /usr/bin 
 
+# download dlv
+RUN cd /opt && \
+	wget http://www.dlvsystem.com/files/dlv.x86-64-linux-elf-static.bin -O dlv && \
+	ln -s /opt/dlv /usr/bin
 
 USER jovyan
 # install PW_explorer	
