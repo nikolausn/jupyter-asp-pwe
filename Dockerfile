@@ -2,18 +2,18 @@ FROM jupyter/minimal-notebook:latest
 
 USER root
 
-# get the clingo binary file for linux
-# and install 
-RUN cd /opt && \
-	wget https://github.com/potassco/clingo/releases/download/v5.3.0/clingo-5.3.0-linux-x86_64.tar.gz -O clingo.tar.gz && \
-	tar -xvzf clingo.tar.gz && \
-	ln -s /opt/clingo-5.3.0-linux-x86_64/clingo /usr/bin 
-
 # download dlv
 RUN cd /opt && \
 	wget http://www.dlvsystem.com/files/dlv.x86-64-linux-elf-static.bin -O dlv && \
 	chmod +x dlv && \
 	ln -s /opt/dlv /usr/bin
+
+# get the clingo binary file for linux
+# and install 
+# get the clingo binary file using conda install
+RUN conda install -c potassco clingo && \
+	conda install -c anaconda graphviz && \
+	conda install -c anaconda pygraphviz
 
 USER jovyan
 # install PW_explorer	
