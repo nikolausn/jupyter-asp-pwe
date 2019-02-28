@@ -11,9 +11,9 @@ RUN cd /opt && \
 # get the clingo binary file for linux
 # and install 
 # get the clingo binary file using conda install
-RUN conda install -c potassco clingo && \
-	conda install -c anaconda graphviz && \
-	conda install -c anaconda pygraphviz
+RUN conda install -c potassco clingo 
+RUN conda install -c anaconda graphviz
+RUN conda install -c anaconda pygraphviz
 
 USER jovyan
 # install PW_explorer	
