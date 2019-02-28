@@ -11,14 +11,14 @@ RUN cd /opt && \
 	tar -xvzf clingo.tar.gz && \
 	ln -s /opt/clingo-5.3.0-linux-x86_64/clingo /usr/bin 
 
+
+USER jovyan
 # install PW_explorer	
 RUN pip install PW_explorer
 
 # prepare a home directory for answer set programming
-USER jovyan
 RUN cd ~ && \
 	mkdir asp
 
 
-
-MAINTAINER Kacper Kowalik <xarthisius.kk@gmail.com>
+MAINTAINER Nikolaus Parulian <nikolaus.nova@gmail.com>
