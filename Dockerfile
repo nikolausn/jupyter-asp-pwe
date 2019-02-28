@@ -2,8 +2,6 @@ FROM jupyter/minimal-notebook:latest
 
 USER root
 
-RUN pip install PWE
-
 # get the clingo binary file for linux
 # and install 
 RUN cd /opt && \
