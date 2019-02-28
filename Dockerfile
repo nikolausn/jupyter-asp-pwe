@@ -12,7 +12,7 @@ RUN cd /opt && \
 # download dlv
 RUN cd /opt && \
 	wget http://www.dlvsystem.com/files/dlv.x86-64-linux-elf-static.bin -O dlv && \
-	chmod +x dlv
+	chmod +x dlv && \
 	ln -s /opt/dlv /usr/bin
 
 USER jovyan
