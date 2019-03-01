@@ -14,9 +14,9 @@ USER jovyan
 # get the clingo binary file for linux
 # and install 
 # get the clingo binary file using conda install
-RUN conda install -c potassco clingo 
-RUN conda install -c anaconda graphviz
-RUN conda install -c anaconda pygraphviz
+RUN conda install -y -c potassco clingo 
+RUN conda install -y -c anaconda graphviz
+RUN conda install -y -c anaconda pygraphviz
 
 # install PW_explorer	
 RUN pip install PW_explorer
@@ -25,7 +25,4 @@ RUN pip install PW_explorer
 RUN cd ~ && \
 	mkdir asp
 	
-RUN cd ~ && \
-	mkdir test
-
 MAINTAINER Nikolaus Parulian <nikolaus.nova@gmail.com>
