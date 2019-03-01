@@ -24,5 +24,8 @@ RUN pip install PW_explorer
 # prepare a home directory for answer set programming
 RUN cd ~ && \
 	mkdir asp
+	
+RUN cd ~ && \
+	mkdir test
 
 MAINTAINER Nikolaus Parulian <nikolaus.nova@gmail.com>
